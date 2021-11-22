@@ -1,34 +1,33 @@
 <header>
-    <div class="navbar navbar-dark bg-primary shadow-sm">
+    <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="navbar-brand align-item-center d-flex">
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <i style="font-size: 40px;" class="fas fa-shipping-fast">&nbsp;</i>
+            <i style="font-size: 40px;" class="fab fa-amazon">&nbsp;</i>
             &nbsp;&nbsp;
-            <strong style="font-size: 30px;">WeBUY</strong>
+            <strong style="font-size: 30px; color: orange;">WeBUY</strong>
             &nbsp;&nbsp;
             <div class="form-group">
                 <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
             </div>
-            <span class="fas fa-search search-icon"></span>
         </div>
         <div>
-            <a *ngIf="!token" routerLink="/login" class="btn btn-primary">
+            <a *ngIf="!token" routerLink="/login" class="btn bg-light">
               <i class="fa fa-key" aria-hidden="true"></i> <strong style="font-size: 20px;"> Login</strong>
             </a>
             </div>
             <div>
-            <a *ngIf="token" (click)="logout();" class="btn btn-primary">
+            <a *ngIf="token" (click)="logout();" class="btn bg-light">
                 <i class="fa fa-key" aria-hidden="true"></i> <strong style="font-size: 20px;"> Logout</strong>
             </a>
             </div>
             <div>
-            <a *ngIf="!token" routerLink="/registration" class="btn btn-primary">
+            <a *ngIf="!token" routerLink="/registration" class="btn bg-light">
               <i class="fa fa-group" aria-hidden="true"></i> <strong style="font-size: 20px;"> Register</strong>
             </a>
             </div>
-        <button routerLink="cart" class="btn btn-primary">
-            <i style="font-size: 30px;" class="fas fa-cart-plus">&nbsp;</i>
+        <button routerLink="cart" class="btn bg-light">
+            <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
             <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
-        </button>
+        </button>&nbsp;
     </div>
 </header>
