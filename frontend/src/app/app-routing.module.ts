@@ -4,11 +4,13 @@ import { CartComponent } from './component/cart/cart.component';
 import { LoginComponent } from './component/login/login.component';
 import { ProductsComponent } from './component/products/products.component';
 import { RegistrationComponent } from './component/registration/registration.component';
+import { PaymentComponent } from './component/payment/payment.component';
 import { AuthGuardService } from './service/auth-guard.service';
 
 const routes: Routes = [
   {path:'', component:ProductsComponent},
   {path:'cart', component: CartComponent},
+  {path:'payment',component:PaymentComponent},
   {path:'login',
   component:LoginComponent,
   canActivate: [AuthGuardService],},

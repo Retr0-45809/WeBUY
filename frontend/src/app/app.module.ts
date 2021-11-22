@@ -14,6 +14,7 @@ import { RegistrationComponent } from './component/registration/registration.com
 import { RestApiService } from './service/rest-api.service';
 import { DataService } from './service/data.service';
 import { AuthGuardService } from './service/auth-guard.service';
+import { PaymentComponent } from './component/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AuthGuardService } from './service/auth-guard.service';
     ProductsComponent,
     FilterPipe,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
