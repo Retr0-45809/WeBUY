@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   public searchTerm !: string;
   isCollapsed: boolean | undefined;
   router: any;
+  content: any;
   constructor(private cartService : CartService) { }
   
   get token() {
@@ -33,7 +34,7 @@ export class HeaderComponent implements OnInit {
     console.log(this.searchTerm);
     this.cartService.search.next(this.searchTerm);
   }
-
+  
   logout() {
     localStorage.clear();
     this.router.navigate(['']);
